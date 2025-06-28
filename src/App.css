@@ -1,0 +1,12 @@
+.purple-btn {
+  border: 1px solid #b2a5ff;
+  color: #b2a5ff;
+}
+.purple-btn:hover {
+  color: #fff2f2;
+  background-color: #b2a5ff;
+}
+
+.social > a:hover {
+  color: #b2a5ff;
+}
