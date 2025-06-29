@@ -4,6 +4,7 @@ import { FaComputer } from 'react-icons/fa6';
 import { IoColorPaletteSharp } from 'react-icons/io5';
 import { MdComputer } from 'react-icons/md';
 import { PiStudentBold } from 'react-icons/pi';
+import SectionTitle from '../shared/SectionTitle';
  const aboutData = [
   {
     title: "My Education",
@@ -34,11 +35,11 @@ import { PiStudentBold } from 'react-icons/pi';
 
 const About = () => {
     return (
-        <section id='about' className=" my-10 md:my-14 lg:my-18 text-sm">
-            <h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-2 text-secondary'>About Me</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-4 py-8">
+        <section id='about' className=" my-10 md:my-14 lg:my-18 text-sm py-6">
+           <SectionTitle title={'About Me'}/>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-4 ">
         {aboutData.map((data, index) => (
-        <div key={index} className="card bg-base-100 shadow-xl p-5 md:p-6 border border-gray-500 hover:border-primary hover:scale-101 duration-500 transition-all">
+        <div key={index} className="card bg-base-100 shadow-sm p-5 md:p-6 border border-gray-500 hover:border-primary hover:scale-101 duration-500 transition-all hover:shadow-primary">
           <h3 className="text-xl md:text-2xl font-semibold mb-3 text-secondary-content flex gap-2 items-center">
            {data.icon} {data.title}</h3>
           <p >{data.description}</p>

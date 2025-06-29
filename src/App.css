@@ -1,6 +1,7 @@
 .purple-btn {
   border: 1px solid #b2a5ff;
   color: #b2a5ff;
+  background: transparent;
 }
 .purple-btn:hover {
   color: #fff2f2;

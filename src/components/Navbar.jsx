@@ -26,8 +26,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div>
-      <div className="max-w-7xl mx-auto navbar bg-base-100 shadow-sm text-accent">
+    <div className="bg-violet-400/50">
+      <div className="max-w-7xl mx-auto navbar  shadow-sm text-accent">
         <div className="navbar-start">
           <NavLogo />
         </div>
