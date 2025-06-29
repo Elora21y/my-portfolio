@@ -6,11 +6,11 @@ import { IoLogoYoutube } from "react-icons/io";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row justify-between gap-10 items-center text-accent bg-base-200 rounded-lg p-2 py-5 sm:px-4 md:p-10 md:pb-15 lg:pb-10 xl:px-15 text-sm md:text-base">
+    <div className="flex flex-col-reverse lg:flex-row justify-between gap-10 items-center bg-base-200 rounded-lg p-2 py-5 pb-8 sm:px-4 md:p-10 md:pb-15 lg:pb-10 xl:px-15 ">
       <div className=" text-center lg:text-left space-y-5 lg:max-w-lg xl:max-w-2xl">
         {/* title */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-secondary ">
-          Hi! I’m  <span className="font-medium  bg-linear-to-r from-primary to-[#E5E0FF] bg-clip-text text-transparent"> Elora Yasmin</span>
+          Hi! I’m  <span className="font-medium  bg-linear-to-r from-primary to-secondary-content bg-clip-text text-transparent"> Elora Yasmin</span>
           <br />—Frontend Web Developer
         </h1>
         <p>

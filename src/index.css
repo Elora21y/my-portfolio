@@ -7,8 +7,8 @@
 @plugin "daisyui/theme" {
   default: true;
   --color-primary: #B2A5FF;
-  /* --color-primary: #E5E0FF; */
   --color-secondary: #FFF2F2;
+  --color-secondary-content: #E5E0FF;
   --color-accent : #C7C8CC
 }
 
