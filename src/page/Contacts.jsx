@@ -21,7 +21,7 @@ const Contacts = () => {
   return (
     <section id="contacts" className=" py-10 md:py-14 lg:py-18 ">
       <SectionTitle title={"Contacts"} />
-      <div className="flex flex-col md:flex-row justify-evenly items-center gap-5">
+      <div className="flex flex-col md:flex-row justify-around items-center gap-5">
         {/* number */}
         <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -42,7 +42,7 @@ const Contacts = () => {
           </p>
         </motion.div>
 
-        <div className="divider"></div>
+        <div className="divider md:divider-horizontal"></div>
 
         {/* form  */}
         <motion.form
