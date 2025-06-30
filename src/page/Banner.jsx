@@ -5,12 +5,19 @@ import { BsGithub } from "react-icons/bs";
 import { IoLogoYoutube } from "react-icons/io";
 import { LuDownload } from "react-icons/lu";
 import { Typewriter } from "react-simple-typewriter";
-
+import { motion } from "motion/react";
 
 const Banner = () => {
   return (
     <div className="flex flex-col-reverse lg:flex-row justify-between gap-10 items-center bg-base-200 rounded-lg p-2 py-5 pb-8 sm:px-4 md:p-10 md:pb-15 lg:pb-10 xl:px-15 ">
-      <div className=" text-center lg:text-left space-y-6 lg:space-y-8 lg:max-w-lg xl:max-w-2xl">
+      {/* banner content */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: true }}
+        className=" text-center lg:text-left space-y-6 lg:space-y-8 lg:max-w-lg xl:max-w-2xl"
+      >
         {/* title */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-secondary ">
           Hi! I’m <br />
@@ -20,8 +27,8 @@ const Banner = () => {
           <br />
           -
           <Typewriter
-          cursorColor="#9383f1"
-            words={['Programmer', 'React Developer','Frontend Developer']}
+            cursorColor="#9383f1"
+            words={["Programmer", "React Developer", "Frontend Developer"]}
             // loop={5}
             cursor
             cursorStyle={false}
@@ -55,10 +62,17 @@ const Banner = () => {
             </a>
           </div>
         </div>
-      </div>
-      <div className="w-64 md:w-[320px] lg:w-[420px]">
+      </motion.div>
+      {/* banner  img */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: true }}
+        className="w-64 md:w-[320px] lg:w-[420px]"
+      >
         <img src={bannerImg} alt="Elora" />
-      </div>
+      </motion.div>
     </div>
   );
 };

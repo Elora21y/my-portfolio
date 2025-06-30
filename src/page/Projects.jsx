@@ -3,7 +3,7 @@ import SectionTitle from "../shared/SectionTitle";
 import project1 from "../assets/projects/food-mockup.jpg";
 import project2 from "../assets/projects/job_nest-mockup.png";
 import project3 from "../assets/projects/green_hub-mockup.png";
-
+import { motion } from "motion/react";
 import { FaArrowRight, FaArrowRightLong } from "react-icons/fa6";
 
 const projects = [
@@ -39,11 +39,15 @@ const projects = [
 const Projects = () => {
     const [isHover , setIsHover] = useState(false)
   return (
-    <div id="projects">
+    <div id="projects" className="bg-gray-900 shadow-4xl px-4 py-6 md:py-10 ;g:py-12 rounded-xl">
       <SectionTitle title={" My Projects"} />
       <div className=" flex flex-col gap-20 md:gap-10 lg:gap-12 xl:gap-16 py-10 max-w-6xl mx-auto">
         {projects.map((project, index) => (
-          <div
+          <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true , amount : 0.1}}
             key={index}
             className={`flex flex-col lg:flex-row ${
               index % 2 !== 0 && "lg:flex-row-reverse"
@@ -53,7 +57,7 @@ const Projects = () => {
               <img src={project.image} alt={project.name} className="rounded-lg  max-h-90" />
             </div>
             {/* content */}
-            <div className="flex gap-4 flex-col max-w-2xl ">
+            <div className="flex gap-4 flex-col max-w-xl text-[13px]">
               {/* name */}
               <h3 className="text-2xl md:text-3xl xl:text-4xl text-secondary-content font-semibold">
                 {project.name}
@@ -83,7 +87,7 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
