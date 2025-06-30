@@ -5,9 +5,43 @@
 }
 .purple-btn:hover {
   color: #fff2f2;
-  background-color: #b2a5ff;
+  background-color: #9383f1;
+  /* opacity: 50; */
+}
+
+ul>li>a{
+  margin-right: 5px;
 }
 
 .social > a:hover {
   color: #b2a5ff;
+}
+
+.icons > p {
+  display: flex ;
+  gap: 8px;
+  align-items: center;
+}
+
+.form div  ,.form textarea{
+  border: none;
+  border-bottom: 1px solid #fff2f2;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+    padding: 5px;
+  width: 100%;
+  background-color: transparent;
+  
+  transition: border 0.3s, box-shadow 0.3s;
+}
+.form input:focus{
+  outline: none;
+}
+.form div:focus-within,
+.form textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #9383f1;
+  box-shadow: 0 2px 0 #9383f1;
 }

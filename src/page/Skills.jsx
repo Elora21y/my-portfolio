@@ -13,6 +13,7 @@ import express from '../assets/skills/express.js-icon.png'
 import nodejs from '../assets/skills/nodejs-icon.png'
 import github from '../assets/skills/github-icon.png'
 import figma from '../assets/skills/figma-icon.png'
+import firebase from '../assets/skills/firebase-icon.png'
 
 const skills = [
     {
@@ -38,6 +39,10 @@ const skills = [
     {
         title  : 'Express.js',
         icon : express
+    },
+    {
+        title  : 'Firebase',
+        icon : firebase
     },
     {
         title  : 'GitHub',

@@ -2,6 +2,7 @@ import React from "react";
 import NavLogo from "../shared/NavLogo";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
+
 const Navbar = () => {
   const links = (
     <>
@@ -15,9 +16,6 @@ const Navbar = () => {
         <a href="#skills">Skills</a>
       </li>
       <li>
-        <a href="#education">Education</a>
-      </li>
-      <li>
         <a href="#projects">Projects</a>
       </li>
       <li>
@@ -25,17 +23,17 @@ const Navbar = () => {
       </li>
     </>
   );
-  return (
-    <div className="bg-violet-400/50">
-      <div className="max-w-7xl mx-auto navbar  shadow-sm text-accent">
+  return ( 
+    <div className="bg-violet-400/50 ">
+      <div className="max-w-7xl mx-auto navbar  shadow-sm text-secondary">
         <div className="navbar-start">
           <NavLogo />
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+       
+        <div className="navbar-end">
+          <div className=" hidden lg:flex">
+          <ul className="menu menu-horizontal ">{links}</ul>
         </div>
-        <div className="navbar-end gap-2">
-          <a className="btn purple-btn">Resume</a>
           {/* menubar */}
           <div className="dropdown">
             <div
