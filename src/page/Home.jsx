@@ -4,6 +4,7 @@ import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contacts from './Contacts';
+import { Toaster } from 'react-hot-toast'
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Skills/>
             <Projects/>
             <Contacts/>
+              <Toaster position="top-center" reverseOrder={false} toastOptions={{ style : {zIndex : 9999} }}/>
         </div>
     );
 };

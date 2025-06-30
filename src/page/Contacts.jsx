@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import SectionTitle from "../shared/SectionTitle";
 import { MdMarkEmailUnread } from "react-icons/md";
 import { FaPhoneFlip, FaRegUser } from "react-icons/fa6";
 import { RiWhatsappFill } from "react-icons/ri";
 import contact from "../assets/portfolio-contact.svg";
+import toast from "react-hot-toast";
+import { useForm} from "@formspree/react";
 
 const Contacts = () => {
-  const handleContact = (e) => {
-    e.preventDefault();
-  };
+    const formRef = useRef()
+     const [state, handleSubmit] = useForm("xyzjoeyn");
+    useEffect(() => {
+    if (state.succeeded) {
+      toast.success("Thanks for messaging!");
+      formRef.current.reset();
+    }
+  }, [state.succeeded]);
+
   return (
     <section id="contacts" className=" py-10 md:py-14 lg:py-18 ">
       <SectionTitle title={"Contacts"} />
@@ -27,22 +35,26 @@ const Contacts = () => {
           </p>
         </div>
         <div className="divider"></div>
-        <form onClick={handleContact} className="flex flex-col gap-4 form">
+        <form
+        ref={formRef}
+        onSubmit={handleSubmit} 
+        className="flex flex-col gap-4 form">
             <h3 className="text-xl md:text-2xl font-semibold text-secondary-content mb-10">Message Me</h3>
           <div>
             <FaRegUser />
-            <input type="text" placeholder=" Name" />
+            <input type="text" placeholder=" Name" name="name"/>
           </div>
           <div>
             <MdMarkEmailUnread size={20}/>
-          <input type="email" placeholder=" Email" />
+          <input type="email" placeholder=" Email" name="email"/>
           </div>
           <textarea
             cols="40"
             rows="5"
             placeholder="Text Here..."
+            name="message"
           ></textarea>
-          <button className="btn purple-btn">Send</button>
+          <button className="btn purple-btn" type="submit">Send</button>
         </form>
       </div>
     </section>

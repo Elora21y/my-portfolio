@@ -60,8 +60,8 @@ const Projects = () => {
               </h3>
               {/* technologies */}
               <div className="flex gap-2 flex-wrap">
-                {project.technologies.map((tech) => (
-                  <button className="text-xs md:text-sm bg-gray-700 rounded-full px-4 py-1">
+                {project.technologies.map((tech , index) => (
+                  <button key={index} className="text-xs md:text-sm bg-gray-700 rounded-full px-4 py-1">
                     {tech}
                   </button>
                 ))}

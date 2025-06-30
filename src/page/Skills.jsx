@@ -72,8 +72,8 @@ const Skills = () => {
             <SectionTitle title={'Skills'}/>
             <div className="flex gap-5 flex-wrap  justify-center items-center">
                 {
-                skills.map(skill => 
-                    <div title={skill.title}
+                skills.map((skill, index) => 
+                    <div key={index} title={skill.title}
                     className='bg-base-100 p-4 w-28 h-30 lg:w-36 lg:h-32 flex flex-col items-center justify-center gap-2 rounded-xl border border-gray-600 hover:border-primary shadow-sm hover:shadow-primary hover:scale-101 duration-300 transition-all'>
             <img src={skill.icon} alt="" className='w-14' />
            <h3 className='font-semibold text-gray-400'>{skill.title}</h3>

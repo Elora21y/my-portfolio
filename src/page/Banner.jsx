@@ -4,6 +4,8 @@ import { FaFacebook } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { IoLogoYoutube } from "react-icons/io";
 import { LuDownload } from "react-icons/lu";
+import { Typewriter } from "react-simple-typewriter";
+
 
 const Banner = () => {
   return (
@@ -11,13 +13,22 @@ const Banner = () => {
       <div className=" text-center lg:text-left space-y-6 lg:space-y-8 lg:max-w-lg xl:max-w-2xl">
         {/* title */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-secondary ">
-          Hi! I’m{" "}
-          <span className="font-medium  bg-linear-to-r from-primary to-secondary-content bg-clip-text text-transparent">
-            {" "}
+          Hi! I’m <br />
+          <span className="font-medium  bg-linear-to-r from-primary to-secondary-content bg-clip-text text-transparent md:my-2 lg:my-4 lg:ml-25 inline-block ">
             Elora Yasmin
           </span>
           <br />
-          —Frontend Web Developer
+          -
+          <Typewriter
+          cursorColor="#9383f1"
+            words={['Programmer', 'React Developer','Frontend Developer']}
+            // loop={5}
+            cursor
+            cursorStyle={false}
+            typeSpeed={70}
+            // deleteSpeed={20}
+            // delaySpeed={3000}
+          />
         </h1>
         <p>
           I specialize in building fast, responsive, and accessible web
