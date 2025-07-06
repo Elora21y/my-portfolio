@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const RootLayout = () => {
     return (
-        <div className=' bg-linear-to-r from-[#0a0a0f] to-gray-800 min-h-screen text-accent'>
+        <div className=' bg-linear-to-r from-[#0a0a0fec] to-gray-800 min-h-screen text-accent'>
             <header className='sticky backdrop-blur-xl top-0 z-10'>
                 <Navbar/>
             </header>

@@ -43,9 +43,9 @@ const About = () => {
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          // viewport={{ once: true}}
+          viewport={{ once: true , amount : 0.2}}
           key={index}
-            className="card bg-gray-900/80 shadow-sm p-5 md:p-6 border border-gray-500 hover:border-primary hover:scale-101 duration-500 transition-all shadow-primary hover:shadow-md text-[13px]"
+            className="card bg-gray-900/80 shadow p-5 md:p-6 border-l border-gray-500 hover:border-primary hover:scale-101 duration-500 transition-all shadow-primary hover:shadow-md text-[13px] "
           >
             <h3 className="text-xl md:text-2xl font-semibold mb-3 text-secondary-content flex gap-2 items-center">
               {data.icon} {data.title}

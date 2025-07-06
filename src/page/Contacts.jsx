@@ -27,7 +27,7 @@ const Contacts = () => {
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-        viewport={{ once: true }}
+        viewport={{ once: true , amount : 0.2}}
         className="flex flex-col gap-3 text-secondary-content icons  items-center md:items-start justify-center">
           <img src={contact} alt="" className="h-70 lg:h-88 xl:h-96" />
           <p>
