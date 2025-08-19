@@ -9,7 +9,7 @@ import { motion } from "motion/react";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row justify-between gap-10 items-center bg-linear-to-r from-gray-900/60 to-base-300 min-h-screen rounded-lg p-2 py-5 pb-8 sm:px-4 md:p-10 md:pb-15  xl:px-15 ">
+    <div className="flex flex-col-reverse lg:flex-row justify-between gap-8 items-center bg-linear-to-r from-gray-900/60 to-base-300 min-h-screen rounded-lg p-2 py-16 sm:px-4 md:px-10 lg:py-0 xl:px-15 ">
       {/* banner content */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -19,23 +19,27 @@ const Banner = () => {
         className=" text-center lg:text-left space-y-5 md:space-y-6 lg:space-y-8 max-w-md lg:max-w-lg xl:max-w-2xl"
       >
         {/* title */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-secondary ">
-          Hello! I’m <br />
-          <span className="font-semibold  bg-linear-to-r from-[#9383f1] to-secondary bg-clip-text text-transparent md:my-2 lg:my-4 lg:ml-25 inline-block ">
+        <h1 className=" font-semibold text-secondary text-xl md:text-3xl lg:text-4xl xl:text-[44px]">
+         <span className="text-2xl lg:text-5xl">
+           Hello! I’m
+          </span> <br />
+          <span className="font-semibold  bg-linear-to-r from-[#9383f1] to-secondary bg-clip-text text-transparent md:my-2 lg:my-4 lg:ml-25 inline-block text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
             Elora Yasmin
           </span>
           <br />
-          -
+          <span className="italic text-[#aca1eb]">
+            -
           <Typewriter
             cursorColor="#9383f1"
-            words={["Web Developer", "React Developer", "Frontend Developer"]}
-            loop={3}
+            words={["Web Developer", "React Developer","MERN Stack Developer", "Frontend Developer"]}
+            loop={2}
             cursor
             cursorStyle={false}
-            typeSpeed={70}
+            typeSpeed={60}
             // deleteSpeed={20}
             // delaySpeed={3000}
           />
+          </span>
         </h1>
         <p>
           I specialize in building fast, responsive, and accessible web

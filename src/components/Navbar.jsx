@@ -1,39 +1,63 @@
 import React from "react";
 import NavLogo from "../shared/NavLogo";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-
+import { AiFillHome } from "react-icons/ai";
+import { FaUserAlt } from "react-icons/fa";
+import { GiSkills } from "react-icons/gi";
+import { MdWork } from "react-icons/md";
+import { BiEnvelope } from "react-icons/bi";
+import { LuDownload } from "react-icons/lu";
 
 const Navbar = () => {
   const links = (
     <>
       <li>
-        <a href="#">Home</a>
+        <a href="#">
+          <AiFillHome /> Home
+        </a>
       </li>
       <li>
-        <a href="#about">About</a>
+        <a href="#about">
+          <FaUserAlt /> About
+        </a>
       </li>
       <li>
-        <a href="#skills">Skills</a>
+        <a href="#skills">
+          <GiSkills /> Skills
+        </a>
       </li>
       <li>
-        <a href="#projects">Projects</a>
+        <a href="#projects">
+          <MdWork /> Projects
+        </a>
       </li>
       <li>
-        <a href="#contacts">Contacts</a>
+        <a href="#contacts">
+          <BiEnvelope /> Contacts
+        </a>
+      </li>
+      <li>
+        <a
+          href="/Elora_Yasmin_Resume.pdf"
+          download
+          className="btn border-secondary btn-sm bg-transparent hover:shadow shadow-primary duration-500 transition-all"
+        >
+          Resume <LuDownload />
+        </a>
       </li>
     </>
   );
-  return ( 
+  return (
     <div className="bg-violet-400/50 ">
       <div className="max-w-7xl mx-auto navbar  shadow-sm text-secondary">
         <div className="navbar-start">
           <NavLogo />
         </div>
-       
+
         <div className="navbar-end">
           <div className=" hidden lg:flex">
-          <ul className="menu menu-horizontal ">{links}</ul>
-        </div>
+            <ul className="menu menu-horizontal ">{links}</ul>
+          </div>
           {/* menubar */}
           <div className="dropdown">
             <div
