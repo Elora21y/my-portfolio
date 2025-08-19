@@ -38,7 +38,7 @@ const Contacts = () => {
           </p> */}
           <p>
             <RiWhatsappFill size={23} />
-            +088 01938 - 627947
+            +880 1938-627947
           </p>
         </motion.div>
 

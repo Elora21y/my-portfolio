@@ -40,10 +40,10 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6 px-4 ">
         {aboutData.map((data, index) => (
           <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0.2, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          viewport={{ once: true , amount : 0.2}}
+          viewport={{ once: true , amount : 1}}
           key={index}
             className="card bg-gray-900/80 shadow p-5 md:p-6 border-l border-gray-500 hover:border-primary hover:scale-101 duration-500 transition-all shadow-primary hover:shadow-md text-[13px] "
           >
