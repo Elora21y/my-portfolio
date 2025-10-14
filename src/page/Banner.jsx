@@ -1,6 +1,7 @@
 import React from "react";
-import bannerImg from "../assets/banner-img.jpg";
-import { FaFacebook } from "react-icons/fa";
+// import bannerImg from "../assets/banner-img.jpg";
+import bannerImg from "../assets/profile1.png";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { IoLogoYoutube } from "react-icons/io";
 import { LuDownload } from "react-icons/lu";
@@ -9,7 +10,8 @@ import { motion } from "motion/react";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row justify-between gap-8 items-center bg-linear-to-r from-gray-900/60 to-base-300 min-h-screen rounded-lg p-2 py-16 sm:px-4 md:px-10 lg:py-0 xl:px-15 ">
+    <div className="flex flex-col-reverse lg:flex-row justify-between gap-6 items-center rounded-lg p-2 py-16 sm:px-4 md:px-10  xl:px-15 ">
+      {/* bg-linear-to-r from-gray-900/60 to-base-300 min-h-screen  */}
       {/* banner content */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -20,10 +22,10 @@ const Banner = () => {
       >
         {/* title */}
         <h1 className=" font-semibold text-secondary text-xl md:text-3xl lg:text-4xl xl:text-[44px]">
-         <span className="text-2xl lg:text-5xl">
-           Hello! I’m
+         <span className="text-2xl md:text-3xl lg:text-5xl">
+          Hello! I’m
           </span> <br />
-          <span className="font-semibold  bg-linear-to-r from-[#9383f1] to-secondary bg-clip-text text-transparent md:my-2 lg:my-4 lg:ml-25 inline-block text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+          <span className="font-semibold  bg-linear-to-r from-[#9383f1] to-secondary bg-clip-text text-transparent md:my-2 lg:my-4 lg:ml-25 inline-block text-3xl md:text-[40px] lg:text-5xl xl:text-6xl">
             Elora Yasmin
           </span>
           <br />
@@ -61,8 +63,8 @@ const Banner = () => {
             <a href="https://github.com/Elora21y" target="_blank">
               <BsGithub size={25} />
             </a>
-            <a href="https://www.youtube.com/@elora256" target="_blank">
-              <IoLogoYoutube size={25} />
+            <a href="https://www.linkedin.com/in/elora-yasmin" target="_blank">
+              <FaLinkedin  size={25} />
             </a>
           </div>
         </div>
@@ -73,9 +75,9 @@ const Banner = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
-        className="w-64 md:w-[320px] lg:w-[420px] border-e-3 border-[#9383f1] rounded-full"
+        className="w-64 md:w-[320px] lg:w-[420px] border-e-3 border-[#9383f1] rounded-full "
       >
-        <img src={bannerImg} alt="Elora" className="rounded-full shadow-md animate-pulse-shadow hover:shadow-lg duration-500 transition-all shadow-[#9383f1] " />
+        <img src='https://i.ibb.co.com/yKJ4N7v/Profile.jpg' alt="Elora" className="rounded-full shadow-md animate-pulse-shadow hover:shadow-lg duration-500 transition-all shadow-[#9383f1] " />
       </motion.div>
     </div>
   );

@@ -6,7 +6,7 @@ const NavLogo = () => {
     return (
         <Link to='/'
         className="navbar-start gap-0">
-          <img src={logo} alt="" className="w-21 max-h-11 rounded-md  object-cover object-center" />
+          <img src={logo} alt="" className="w-26 max-h-12 rounded-md  object-cover object-center" />
           <h3 className="font-medium text-secondary-content text-xs -ml-2 mt-3">
             YASMIN
           </h3>
