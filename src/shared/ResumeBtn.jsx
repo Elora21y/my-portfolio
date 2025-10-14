@@ -11,7 +11,7 @@ const ResumeBtn = () => {
               animate={{ opacity: 1, scale: 1 }}
               whileHover={{ boxShadow: "0 0 20px rgba(139, 92, 246, 0.5)" }}
               whileTap={{ scale: 0.95 }}
-              className="ml-2 btn border-violet-400 bg-gradient-to-r from-violet-600 to-violet-400 hover:from-violet-400 hover:to-violet-600 text-white rounded-lg font-medium flex items-center gap-2 shadow-lg shadow-violet-500/30 transition-all duration-500"
+              className="ml-2 btn border-violet-400 bg-gradient-to-r from-violet-600 to-violet-400 hover:from-violet-400 hover:to-violet-600 text-secondary rounded-lg font-medium flex items-center justify-center gap-2 shadow-lg shadow-violet-500/50 transition-all duration-500"
             >
               Resume
               <motion.div
