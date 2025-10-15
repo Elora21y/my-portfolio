@@ -18,8 +18,8 @@ useEffect(() => {
             // Remove loader after animation completes
             setTimeout(() => {
                 setInitialLoading(false);
-            }, 700); // Wait for 1s curtain animation
-        }, 2000); // 2.5s loading time
+            }, 500); // Wait for 1s curtain animation
+        }, 1500); 
         
         return () => clearTimeout(timer);
     }, []);

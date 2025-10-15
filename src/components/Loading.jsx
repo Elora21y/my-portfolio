@@ -9,12 +9,12 @@ const Loading = ({ isComplete = false }) => {
         initial={{ x: 0 }}
         animate={isComplete ? { x: '-100%' } : { x: 0 }}
         transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-        className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-violet-950 via-purple-900 to-indigo-950"
+        className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-violet-950/20 via-violet-900 to-violet-950/50"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-transparent" />
         
         {/* Glow effect on edge */}
-        <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-violet-400/50 to-transparent" />
+        {/* <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-violet-400/50 to-transparent" /> */}
       </motion.div>
 
       {/* Right Panel - Slides to right */}
@@ -22,12 +22,12 @@ const Loading = ({ isComplete = false }) => {
         initial={{ x: 0 }}
         animate={isComplete ? { x: '100%' } : { x: 0 }}
         transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-        className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-indigo-950 via-purple-900 to-violet-950"
+        className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-violet-950/20 via-violet-900 to-violet-950/50"
       >
         <div className="absolute inset-0 bg-gradient-to-bl from-violet-500/10 to-transparent" />
         
         {/* Glow effect on edge */}
-        <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-violet-400/50 to-transparent" />
+        {/* <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-violet-400/50 to-transparent" /> */}
       </motion.div>
 
       {/* Content - Centered on both panels */}
@@ -40,7 +40,7 @@ const Loading = ({ isComplete = false }) => {
         <div className="flex flex-col items-center gap-8">
           {/* Name with CSS Animation */}
           <div className="name-container">
-            <h1 className="text-7xl sm:text-8xl md:text-9xl font-black tracking-wider text-gradient">
+            <h1 className="text-6xl md:text-8xl font-black tracking-wider text-gradient">
               ELORA
             </h1>
           </div>
@@ -79,9 +79,9 @@ const Loading = ({ isComplete = false }) => {
           background: linear-gradient(
             135deg,
             #a78bfa 0%,
-            #c084fc 25%,
-            #e879f9 50%,
-            #c084fc 75%,
+            #8b2fed 25%,
+           #ae71f0 50%,
+            #8b2fed 75%,
             #a78bfa 100%
           );
           background-size: 200% 200%;
