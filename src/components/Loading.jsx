@@ -9,7 +9,7 @@ const Loading = ({ isComplete = false }) => {
         initial={{ x: 0 }}
         animate={isComplete ? { x: '-100%' } : { x: 0 }}
         transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-        className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-violet-950/20 via-violet-900 to-violet-950/50"
+        className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-violet-950/10 via-violet-950 to-violet-950/20"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-transparent" />
         
@@ -22,7 +22,7 @@ const Loading = ({ isComplete = false }) => {
         initial={{ x: 0 }}
         animate={isComplete ? { x: '100%' } : { x: 0 }}
         transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-        className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-violet-950/20 via-violet-900 to-violet-950/50"
+        className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-violet-950/10 via-violet-950 to-violet-950/20"
       >
         <div className="absolute inset-0 bg-gradient-to-bl from-violet-500/10 to-transparent" />
         
@@ -47,7 +47,7 @@ const Loading = ({ isComplete = false }) => {
 
           {/* Progress Dots */}
           <div className="flex gap-2">
-            {[0, 1, 2, 3].map((i) => (
+            {[0, 1, 2].map((i) => (
               <div
                 key={i}
                 className="dot"

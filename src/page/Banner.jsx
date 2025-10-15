@@ -27,136 +27,153 @@ const socials = [
   },
 ];
 
-
 const Banner = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row justify-between gap-6 items-center rounded-lg p-2 py-16 sm:px-4 md:px-10  xl:px-15 ">
+    <div className="flex flex-col-reverse lg:flex-row justify-between gap-16 md:gap-26 items-center rounded-lg p-2 py-16 sm:px-4 md:px-10  xl:px-15 ">
       {/* bg-linear-to-r from-gray-900/60 to-base-300 min-h-screen  */}
       {/* banner content */}
       {/* Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="flex-1 text-center lg:text-left space-y-6 max-w-2xl"
-        >
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="text-center lg:text-left space-y-6 max-w-2xl"
+      >
+        {/* Main Title */}
+        <div className="space-y-3">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-3xl md:text-4xl font-bold"
+          >
+            <span className="text-secondary ">Hello! I'm</span>
+            <br />
+            <span className="bg-gradient-to-r from-violet-500 via-violet-300 to-secondary bg-clip-text text-transparent md:text-5xl xl:text-6xl  my-1 md:my-2 lg:my-4 lg:ml-20 inline-block">
+              Elora Yasmin
+            </span>
+          </motion.h1>
 
-          {/* Main Title */}
-          <div className="space-y-3">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-3xl md:text-4xl font-bold"
-            >
-              <span className="text-secondary ">Hello! I'm</span>
-              <br />
-              <span className="bg-gradient-to-r from-violet-500 via-violet-300 to-secondary bg-clip-text text-transparent lg:text-5xl xl:text-6xl  my-1 lg:my-4 lg:ml-20 inline-block">
-                Elora Yasmin
-              </span>
-            </motion.h1>
-
-            {/* Typewriter */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-semibold text-violet-300 h-12 lg:h-14 italic"
-            >
-              <Typewriter
-                words={[
-                  "Web Developer",
+          {/* Typewriter */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="text-2xl sm:text-3xl md:text-4xl font-semibold text-violet-300 h-12 lg:h-14 italic"
+          >
+            <Typewriter
+              words={[
+                "Web Developer",
                 "React Developer",
                 "MERN Stack Developer",
                 "Frontend Developer",
-                ]}
-                loop={0}
-                cursor
-                cursorStyle="|"
-                typeSpeed={80}
-                deleteSpeed={50}
-                delaySpeed={2000}
-              />
-            </motion.div>
-          </div>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="text-gray-400 text-base xl:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0"
-          >
-            Passionate about crafting seamless digital experiences. I transform ideas into 
-            interactive, accessible, and performant web applications using modern technologies.
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="flex flex-wrap gap-4 justify-center lg:justify-start items-center"
-          >
-            <a
-              href="#projects"
-              className="btn  border-violet-300 hover:border-violet-500/50 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 hover:bg-violet-500/10 "
-            >
-              View Projects
-              <LuArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </a>
-            
-
-            <ResumeBtn />
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={2000}
+            />
           </motion.div>
-          
-          {/* Social Links */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.9 }}
-            className="flex gap-4 justify-center lg:justify-start"
+        </div>
+
+        {/* Description */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          className="text-gray-400 text-base xl:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0"
+        >
+          Passionate about crafting seamless digital experiences. I transform
+          ideas into interactive, accessible, and performant web applications
+          using modern technologies.
+        </motion.p>
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="flex flex-wrap gap-4 justify-center lg:justify-start items-center"
+        >
+          <a
+            href="#projects"
+            className="btn  border-violet-300 hover:border-violet-500/50 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 hover:bg-violet-500/10 "
           >
-            {socials.map((social, index) => (
-              <motion.a
-                key={index}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className={`p-2 rounded-lg bg-violet-500/10 border border-violet-500/20 text-gray-300 ${social.color} transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/20`}
-                aria-label={social.label}
-              >
-                <social.icon size={22} />
-              </motion.a>
-            ))}
-            
-            <a
+            View Projects
+            <LuArrowRight className="group-hover:translate-x-1 transition-transform" />
+          </a>
+
+          <ResumeBtn />
+        </motion.div>
+
+        {/* Social Links */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.9 }}
+          className="flex gap-4 justify-center lg:justify-start"
+        >
+          {socials.map((social, index) => (
+            <motion.a
+              key={index}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className={`p-2 rounded-lg bg-violet-500/10 border border-violet-500/20 text-gray-300 ${social.color} transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/20`}
+              aria-label={social.label}
+            >
+              <social.icon size={22} />
+            </motion.a>
+          ))}
+
+          {/* <a
               href="#contacts"
               className="btn  hover:border-violet-300/50 border-violet-500/50 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 bg-violet-500/10"
             >
               <HiOutlineMail size={20} />
               Contact Me
-            </a>
-          </motion.div>
-
+            </a> */}
         </motion.div>
+      </motion.div>
+
+      
       {/* banner  img */}
       <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
-        className="w-64 md:w-[320px] lg:w-[420px] border-e-3 border-[#9383f1] rounded-full "
+        className="w-64 md:w-[420px] rounded-full relative shadow-md hover:shadow-lg duration-500 transition-all shadow-[#9383f1]"
       >
+        {/* Animated Rings */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 rounded-full border-t-3 border-t-[#9483f16d] scale-118 p-1" />
+          <div
+              className="absolute inset-0 rounded-full border-b-3 border-b-[#9483f16d] scale-125"
+            />
+        </div>
+        {/* glow effect */}
+        <div className="absolute inset-0 bg-violet-400 rounded-full blur-lg md:blur-xl lg:blur-lg xl:blur-xl opacity-10 animate-pulse -z-10" />
         <img
           src="https://i.ibb.co.com/yKJ4N7v/Profile.jpg"
           alt="Elora"
-          className="rounded-full shadow-md animate-pulse-shadow hover:shadow-lg duration-500 transition-all shadow-[#9383f1] "
+          className="rounded-full  "
         />
+        {/* Floating Badge */}
+        <motion.a
+          href="#contacts"
+          animate={{ y: [0, -15, 0] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -bottom-4 left-1/2 -translate-x-1/2 btn lg:btn-lg border-0 bg-gradient-to-r from-violet-600 to-violet-500 rounded-full shadow-md shadow-violet-500/50 text-sm whitespace-nowrap  transition-all duration-300 flex items-center gap-2 text-secondary"
+        >
+          <HiOutlineMail size={16} />
+          Contact Me
+        </motion.a>
       </motion.div>
-      
     </div>
   );
 };
