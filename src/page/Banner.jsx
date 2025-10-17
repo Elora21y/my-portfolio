@@ -1,11 +1,11 @@
 import React from "react";
-// import bannerImg from "../assets/profile1.png";
+import bannerImg from "../assets/Profile.jpg";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { IoLogoYoutube } from "react-icons/io";
 import { LuArrowRight, LuDownload } from "react-icons/lu";
 import { Typewriter } from "react-simple-typewriter";
-import { motion } from "motion/react";
+import { motion } from "motion/react"; 
 import ResumeBtn from "../shared/ResumeBtn";
 import { HiOutlineMail } from "react-icons/hi";
 
@@ -45,11 +45,11 @@ const Banner = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-3xl md:text-4xl font-bold"
+            className="text-3xl  font-bold"
           >
             <span className="text-secondary ">Hello! I'm</span>
             <br />
-            <span className="bg-gradient-to-r from-violet-500 via-violet-300 to-secondary bg-clip-text text-transparent md:text-5xl xl:text-6xl  my-1 md:my-2 lg:my-4 lg:ml-20 inline-block">
+            <span className="bg-gradient-to-r from-violet-500 via-violet-300 to-secondary bg-clip-text text-transparent sm:text-4xl md:text-5xl xl:text-6xl  my-1 md:my-2 lg:my-4 lg:ml-20 inline-block">
               Elora Yasmin
             </span>
           </motion.h1>
@@ -59,7 +59,7 @@ const Banner = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-2xl sm:text-3xl md:text-4xl font-semibold text-violet-300 h-12 lg:h-14 italic"
+            className="text-2xl sm:text-[26px] md:text-4xl font-semibold text-violet-300 h-12 lg:h-14 italic"
           >
             <Typewriter
               words={[
@@ -99,7 +99,7 @@ const Banner = () => {
         >
           <a
             href="#projects"
-            className="btn  border-violet-300 hover:border-violet-500/50 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 hover:bg-violet-500/10 "
+            className="btn  border-violet-300 hover:border-violet-500/50 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 bg-transparent hover:bg-violet-500/10 "
           >
             View Projects
             <LuArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -113,7 +113,7 @@ const Banner = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
-          className="flex gap-4 justify-center lg:justify-start"
+          className="flex gap-5 justify-center lg:justify-start"
         >
           {socials.map((social, index) => (
             <motion.a
@@ -121,9 +121,10 @@ const Banner = () => {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.1, y: -2 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`p-2 rounded-lg bg-violet-500/10 border border-violet-500/20 text-gray-300 ${social.color} transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/20`}
+              className={`p-2 rounded-lg bg-violet-500/10 border border-violet-500/20 text-gray-300 ${social.color} transition-all duration-300 shadow-md hover:shadow-lg
+               shadow-violet-400/30`}
               aria-label={social.label}
             >
               <social.icon size={22} />
@@ -151,15 +152,15 @@ const Banner = () => {
       >
         {/* Animated Rings */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 rounded-full border-t-3 border-t-[#9483f16d] scale-118 p-1" />
+          <div className="absolute inset-0 rounded-full border-t-3  border-[#9483f16d] scale-118 p-1" />
           <div
               className="absolute inset-0 rounded-full border-b-3 border-b-[#9483f16d] scale-125"
             />
         </div>
         {/* glow effect */}
-        <div className="absolute inset-0 bg-violet-400 rounded-full blur-lg md:blur-xl lg:blur-lg xl:blur-xl opacity-10 animate-pulse -z-10" />
+        <div className="absolute inset-0 bg-violet-400 rounded-full blur-2xl lg:blur-lg xl:blur-xl opacity-10 animate-pulse -z-10" />
         <img
-          src="https://i.ibb.co.com/yKJ4N7v/Profile.jpg"
+          src={bannerImg ||"https://i.ibb.co.com/yKJ4N7v/Profile.jpg " }
           alt="Elora"
           className="rounded-full  "
         />
