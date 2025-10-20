@@ -85,7 +85,7 @@ const Banner = () => {
           transition={{ delay: 0.6 }}
           className="text-gray-400 text-base xl:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 xl:pb-4"
         >
-          I am a Frontend Developer who loves transforming ideas into clean, responsive, and user-focused web experiences. I enjoy crafting modern interfaces with React and the MERN stack. I also know about little bit Next.JS
+          I am a Frontend Developer who loves transforming ideas into clean, responsive, and user-focused web experiences. I enjoy crafting modern interfaces with React and the MERN stack. And also exploring Next.js
         </motion.p>
 
         {/* CTA Buttons */}
