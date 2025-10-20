@@ -90,13 +90,14 @@ const About = () => {
 {/* content */}
       <div className="space-y-8">
         <SectionTitle title={"About Me"} />
+        
         {/* Description */}
           <motion.p
             initial={{ opacity: 0.05, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease : 'easeInOut' ,delay: 0.1 }}
             viewport={{amount : 0.5}}
-            className="text-gray-300 text-base leading-relaxed"
+            className="text-gray-300 md:text-base leading-relaxed px-3 lg:px-0"
           >
             {/* Hi, I'm Elora — a frontend developer who enjoys blending creativity
             and code to build meaningful web experiences. I love working with
@@ -124,6 +125,23 @@ const About = () => {
               <p>{data.description}</p>
             </motion.div>
           ))}
+        </div>
+        <div className="flex justify-center items-center">
+          {/* cv button */}
+        <motion.a
+          href="Elora_Yasmin_CV.pdf"
+          download
+          initial={{y : 50, opacity : 0.05}}
+          whileInView={{y : 0, opacity : 1}}
+          transition={{ duration: 0.4, ease : 'easeInOut' ,delay: 0.3 }}
+            viewport={{amount : 0.4}}
+          // animate={{ y: [5, -20, 5] }}
+          // transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className=" lg:hidden -top-1 -right-5 btn btn-lg border-0 bg-gradient-to-r from-violet-400 to-violet-600 rounded-full shadow-md shadow-violet-500/50 text-sm whitespace-nowrap  transition-all duration-300 flex items-center gap-2 text-secondary"
+        >
+          My CV
+          <LuDownload className="text-lg" />
+        </motion.a>
         </div>
       </div>
      </div>
