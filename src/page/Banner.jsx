@@ -47,7 +47,7 @@ const Banner = () => {
             transition={{ delay: 0.3 }}
             className="text-3xl  font-bold"
           >
-            <span className="text-secondary ">Hello! I'm</span>
+            <span className="text-secondary ">Hello! Meet</span>
             <br />
             <span className="bg-gradient-to-r from-violet-500 via-violet-300 to-secondary bg-clip-text text-transparent sm:text-4xl md:text-5xl xl:text-6xl  my-1 md:my-2 lg:my-4 lg:ml-20 inline-block">
               Elora Yasmin
@@ -83,11 +83,9 @@ const Banner = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="text-gray-400 text-base xl:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0"
+          className="text-gray-400 text-base xl:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 xl:pb-4"
         >
-          Passionate about crafting seamless digital experiences. I transform
-          ideas into interactive, accessible, and performant web applications
-          using modern technologies.
+          I am a Frontend Developer who loves transforming ideas into clean, responsive, and user-focused web experiences. I enjoy crafting modern interfaces with React and the MERN stack. I also know about little bit Next.JS
         </motion.p>
 
         {/* CTA Buttons */}
@@ -113,7 +111,7 @@ const Banner = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
-          className="flex gap-5 justify-center lg:justify-start"
+          className="flex gap-5 justify-center lg:justify-start "
         >
           {socials.map((social, index) => (
             <motion.a
@@ -158,7 +156,7 @@ const Banner = () => {
             />
         </div>
         {/* glow effect */}
-        <div className="absolute inset-0 bg-violet-400 rounded-full blur-2xl lg:blur-lg xl:blur-xl opacity-10 animate-pulse -z-10" />
+        <div className="absolute inset-0 bg-violet-400 rounded-full blur-3xl md:blur-2xl lg:blur-xl xl:blur-2xl opacity-10 animate-pulse -z-10" />
         <img
           src={bannerImg ||"https://i.ibb.co.com/yKJ4N7v/Profile.jpg " }
           alt="Elora"

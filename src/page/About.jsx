@@ -5,54 +5,111 @@ import { MdComputer } from "react-icons/md";
 import { PiStudentBold } from "react-icons/pi";
 import SectionTitle from "../shared/SectionTitle";
 import { motion } from "motion/react";
+import bannerImg from "../assets/Profile.jpg";
+import { LuDownload } from "react-icons/lu";
+
+// const aboutData = [
+//   {
+//     title: "My Education",
+//     description:
+//       "I'm currently studying BBA in Accounting at National University, Bangladesh. My love for math and analytical thinking led me to choose this subject. During my Intermediate years, I also enjoyed studying ICT subject, where I deeply enjoyed exploring each chapter.  ",
+//     icon: <PiStudentBold size={25} />,
+//   },
+//   {
+//     title: "My Programming Journey",
+//     description:
+//       "My programming journey began after I got admitted to honors. Though I started as a fresher,I was lucky to have guidance from my brother, who not only inspired me became a developer but also he enrolled me in Programming Hero Level 1 (Batch 11). Since then, my journey of web development began.",
+//     icon: <MdComputer size={25} />,
+//   },
+//   {
+//     title: "Beyond Coding",
+//     description:
+//       "Outside of programming, I love painting and art — a passion I’ve had since childhood.  I also actively participated various sports in college events, and have even won prizes. These experiences help me grow as a person — combining creativity, collaboration, and communication.",
+//     icon: <IoColorPaletteSharp size={25} />,
+//   },
+//   {
+//     title: "Personality & Creativity",
+//     description:
+//       "I’m a loves building UI/UX from scratch and bringing designs to life . My strong math skills help me in problem solving,and artistic side enhances my design.I’m always learning, always building, and always striving to connect logic with creativity — whether it's through code.",
+//     icon: <BsStars size={25} />,
+//   },
+// ];
 
 const aboutData = [
   {
-    title: "My Education",
+    title: "Programming Journey",
     description:
-      "I'm currently studying BBA in Accounting at National University, Bangladesh. My love for math and analytical thinking led me to choose this subject. During my Intermediate years, I also enjoyed studying ICT subject, where I deeply enjoyed exploring each chapter.  ",
-    icon: <PiStudentBold size={25} />,
-  },
-  {
-    title: "My Programming Journey",
-    description:
-      "My programming journey began after I got admitted to honors. Though I started as a fresher,I was lucky to have guidance from my brother, who not only inspired me became a developer but also he enrolled me in Programming Hero Level 1 (Batch 11). Since then, my journey of web development began.",
+      "My programming journey began after I got admitted to honors. Though I started as a fresher, I was lucky to have guidance from my brother. What started as curiosity soon became passion, I enjoy crafting clean UI and learning something new.",
     icon: <MdComputer size={25} />,
   },
   {
-    title: "Beyond Coding",
+    title: "Education & Creativity",
     description:
-      "Outside of programming, I love painting and art — a passion I’ve had since childhood.  I also actively participated various sports in college events, and have even won prizes. These experiences help me grow as a person — combining creativity, collaboration, and communication.",
-    icon: <IoColorPaletteSharp size={25} />,
-  },
-  {
-    title: "Personality & Creativity",
-    description:
-      "I’m a loves building UI/UX from scratch and bringing designs to life . My strong math skills help me in problem solving,and artistic side enhances my design.I’m always learning, always building, and always striving to connect logic with creativity — whether it's through code.",
-    icon: <BsStars size={25} />,
+      "I’m studying BBA in Accounting at National University of Bangladesh. Alongside studies, I have always loved design, teamwork, sports, arts and crafts. These combine my analytical side with my imagination.",
+    icon: <PiStudentBold size={25} />,
   },
 ];
 
 const About = () => {
   return (
-    <section id="about" className=" my-10 md:my-14 lg:my-18 text-sm py-6">
-      <SectionTitle title={"About Me"} />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6 px-4 ">
-        {aboutData.map((data, index) => (
-          <motion.div
-          initial={{ opacity: 0.2, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          viewport={{ once: true , amount : 1}}
-          key={index}
-            className="card bg-gray-900/80 shadow p-5 md:p-6 border-l border-gray-500 hover:border-primary hover:scale-101 duration-500 transition-all shadow-primary hover:shadow-md text-[13px] "
-          >
-            <h3 className="text-xl md:text-2xl font-semibold mb-3 text-secondary-content flex gap-2 items-center">
-              {data.icon} {data.title}
-            </h3>
-            <p>{data.description}</p>
-          </motion.div>
-        ))}
+    <section
+      id="about"
+      className="grid lg:grid-cols-2 items-center  my-10 md:my-14 lg:my-24 text-sm py-6 max-w-6xl mx-auto"
+    >
+      {/*   img */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
+              viewport={{amount : 0.4}}
+        className="w-[430px] hidden lg:flex relative"
+      > 
+        {/* cv button */}
+        <motion.a
+          href="Elora_Yasmin_CV.pdf"
+          download
+          animate={{ y: [5, -20, 5] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -top-1 -right-5 btn btn-lg border-0 bg-gradient-to-r from-violet-400 to-violet-600 rounded-full shadow-md shadow-violet-500/50 text-sm whitespace-nowrap  transition-all duration-300 flex items-center gap-2 text-secondary"
+        >
+          My CV
+          <LuDownload className="text-lg" />
+        </motion.a>
+        {/* <div className="bg-violet-400 rounded-4xl " > */}
+        <div className=" bg-gray-700 rounded-4xl rounded-tl-[80px] p-3 shadow-lg shadow-primary">
+          <img
+            src={bannerImg || "https://i.ibb.co.com/yKJ4N7v/Profile.jpg "}
+            alt="Elora"
+            className="rounded-4xl rounded-tl-[100px] "
+          />
+          {/* </div> */}
+        </div>
+      </motion.div>
+
+
+      <div className="space-y-5">
+        <SectionTitle title={"About Me"} />
+        <p>
+          Hi, I’m Elora — a frontend developer who enjoys blending creativity and code to build meaningful web experiences. I love working with React and modern JavaScript tools to design interfaces that are not only responsive but also intuitive and engaging.
+        </p>
+        <div className="flex flex-col md:flex-row gap-4 px-4 ">
+          {aboutData.map((data, index) => (
+            <motion.div
+              initial={{ opacity: 0.2, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              viewport={{ amount : 0.5 } }
+              key={index}
+              className="card bg-gray-900/80 shadow p-5  border-gray-500 hover:border-primary hover:scale-101 duration-500 transition-all shadow-primary hover:shadow-md text-[13px] border-l-8 border-l-primary lg:border-l-1"
+            >
+               {data.icon}
+              <h3 className="text-lg md:text-xl  font-semibold mb-3 text-secondary-content flex gap-2 items-center">
+                {data.title}
+              </h3>
+              <p>{data.description}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
