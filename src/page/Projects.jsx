@@ -39,7 +39,7 @@ const projects = [
 const Projects = () => {
     const [isHover , setIsHover] = useState(false)
   return (
-    <div id="projects" className="bg-gray-900 shadow-4xl px-4 py-6 md:py-10 ;g:py-12 rounded-xl">
+    <div id="projects" className="bg-gray-900 shadow-4xl px-4 py-6 md:py-10 lg:py-12 rounded-xl">
       <SectionTitle title={" My Projects"} />
       <div className=" flex flex-col gap-20 md:gap-10 lg:gap-12 xl:gap-16 py-10 max-w-6xl mx-auto">
         {projects.map((project, index) => (

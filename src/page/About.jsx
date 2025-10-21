@@ -136,9 +136,9 @@ const About = () => {
             <motion.a
               href="Elora_Yasmin_CV.pdf"
               download
-              initial={{ y: 50, opacity: 0.05 }}
+              initial={{ y: 30, opacity: 0.05 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, ease: "easeInOut", delay: 0.3 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ amount: 0.4 }}
               // animate={{ y: [5, -20, 5] }}
               // transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
