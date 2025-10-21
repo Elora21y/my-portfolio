@@ -47,7 +47,7 @@ const Banner = () => {
             transition={{ delay: 0.3 }}
             className="text-3xl  font-bold"
           >
-            <span className="text-secondary ">Hello! Meet</span>
+            <span className="text-secondary text-xl sm:text-2xl md:text-3xl">Hello! Meet</span>
             <br />
             <span className="bg-gradient-to-r from-violet-500 via-violet-300 to-secondary bg-clip-text text-transparent sm:text-4xl md:text-5xl xl:text-6xl  my-1 md:my-2 lg:my-4 lg:ml-20 inline-block">
               Elora Yasmin
