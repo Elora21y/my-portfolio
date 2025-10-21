@@ -15,7 +15,7 @@ const Home = () => {
             <Skills/>
             <Projects/>
             <Contacts/>
-            {/* <ScrollUpButton/> */}
+            <ScrollUpButton/>
               <Toaster position="top-center" reverseOrder={false} toastOptions={{ style : {zIndex : 9999} }}/>
         </div>
     );
