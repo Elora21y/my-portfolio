@@ -95,9 +95,9 @@ const ProjectsWithToggle = () => {
             {projects.map((project, index) => (
               <motion.div
                 key={`grid-${index}`}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
                 className="group relative bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700 hover:border-violet-500 transition-all duration-300"
               >
                 {/* Image */}
@@ -166,11 +166,11 @@ const ProjectsWithToggle = () => {
             {projects.map((project, index) => (
               <motion.div
                 key={`list-${index}`}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
-                className={`flex flex-col lg:flex-row ${
-                  index % 2 !== 0 && "lg:flex-row-reverse"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className={`flex flex-col md:flex-row ${
+                  index % 2 !== 0 && "md:flex-row-reverse"
                 } gap-8 lg:gap-12 items-center group`}
               >
                 {/* Image Section */}
