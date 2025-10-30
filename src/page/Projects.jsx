@@ -56,7 +56,7 @@ const ProjectsWithToggle = ({ showAll = true }) => {
   const displayedProjects = showAll ? projects : projects.slice(0,3)
 
   return (
-    <div id="projects" className="px-4 py-12 md:py-16 lg:pb-24 rounded-xl ">
+    <div id="projects" className=" py-12 md:py-16 lg:pb-24 rounded-xl ">
       {/* Header with Toggle */}
       <div className=" mb-12">
        <SectionTitle title={showAll ? 'All Projects' : ' Featured Projects'}/>
@@ -67,7 +67,7 @@ const ProjectsWithToggle = ({ showAll = true }) => {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setViewMode("grid")}
-            className={`cursor-pointer px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
+            className={`cursor-pointer px-3 sm:px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
               viewMode === "grid"
                 ? "bg-gradient-to-r from-violet-600 to-violet-500 text-white shadow-lg shadow-violet-500/50"
                 : "bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white border border-gray-700"
@@ -81,7 +81,7 @@ const ProjectsWithToggle = ({ showAll = true }) => {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setViewMode("list")}
-            className={`cursor-pointer px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
+            className={`cursor-pointer  px-3 sm:px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
               viewMode === "list"
                 ? "bg-gradient-to-r from-violet-600 to-violet-500 text-white shadow-lg shadow-violet-500/50"
                 : "bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white border border-gray-700"
@@ -168,7 +168,7 @@ const ProjectsWithToggle = ({ showAll = true }) => {
                     ))}
                   </div>
                     {/* Action Buttons */}
-                  <div className="flex lg:hidden gap-4 pt-4">
+                  <div className="flex flex-col sm:flex-row lg:hidden gap-4 pt-4">
                     <a
                       href={project.github_link}
                       target="_blank"
