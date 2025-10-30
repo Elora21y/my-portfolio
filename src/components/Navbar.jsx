@@ -36,7 +36,7 @@ const handleNavClick = ( href) => {
   setActiveSection(href);
   setTimeout(() => {
     setIsOpen(false);
-  }, 500);
+  }, 700);
 };
 
   return (
@@ -50,7 +50,7 @@ const handleNavClick = ( href) => {
           : "bg-violet-400/20 backdrop-blur-xl"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
         <div className="flex items-center justify-between h-14 md:h-16">
           {/* Logo */}
           <motion.div

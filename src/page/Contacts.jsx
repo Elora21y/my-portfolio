@@ -38,7 +38,7 @@ const Contacts = () => {
   return (
     <section id="contacts" className="py-10 md:py-14 lg:py-20 px-4">
 
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 lg:gap-12 max-w-7xl mx-auto">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12 max-w-7xl mx-auto">
         {/* Left: Contact Info */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -90,7 +90,7 @@ const Contacts = () => {
         </motion.div>
 
         {/* Divider */}
-        <div className="divider md:divider-horizontal"></div>
+        <div className="divider lg:divider-horizontal"></div>
 
         {/* Right: Contact Form */}
         <motion.form

@@ -13,7 +13,7 @@ const Home = () => {
             <Banner/>
             <About/>
             <Skills/>
-            <Projects/>
+            <Projects showAll={false}/>
             <Contacts/>
             <ScrollUpButton/>
               <Toaster position="top-center" reverseOrder={false} toastOptions={{ style : {zIndex : 9999} }}/>
