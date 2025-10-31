@@ -36,15 +36,15 @@ const Contacts = () => {
   ];
 
   return (
-    <section id="contacts" className="py-10 md:py-14 lg:py-20 px-4">
+    <section id="contacts" className="py-10 md:py-14 lg:py-20 ">
 
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12 max-w-7xl mx-auto">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12 ">
         {/* Left: Contact Info */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{  amount: 0.5 }}
           className="flex flex-col gap-6 text-secondary-content items-center md:items-start justify-center flex-1"
         >
           {/* Title */}
@@ -97,7 +97,7 @@ const Contacts = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ amount:0.5 }}
           ref={formRef}
           onSubmit={handleSubmit}
           className="flex flex-col gap-5 flex-1 max-w-lg w-full bg-gray-800/30 p-6 md:p-8 rounded-2xl border border-gray-700 shadow-md shadow-violet-300"
@@ -114,7 +114,7 @@ const Contacts = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="John Doe"
+                placeholder="e.g. Elora Yasmin"
                 required
                 onFocus={() => setFocusedField("name")}
                 onBlur={() => setFocusedField(null)}
@@ -138,7 +138,7 @@ const Contacts = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="john@example.com"
+                placeholder="e.g. elorayasmin20@gmail.com"
                 required
                 onFocus={() => setFocusedField("email")}
                 onBlur={() => setFocusedField(null)}

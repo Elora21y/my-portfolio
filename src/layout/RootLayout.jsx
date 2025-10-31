@@ -4,6 +4,14 @@ import { Outlet, useNavigation } from 'react-router';
 import Footer from '../components/Footer';
 import LightRays from '../components/Darkveil';
 import Loading from '../components/Loading';
+// import { ScrollSmoother, ScrollTrigger } from 'gsap/all';
+// import gsap from 'gsap';
+// gsap.registerPlugin(ScrollTrigger ,ScrollSmoother)
+// ScrollSmoother.create({
+//     content : '#smooth-content',
+//     smooth : 2,
+//     effects : true
+// })
 
 const RootLayout = () => {
  const navigation = useNavigation();
@@ -47,7 +55,7 @@ useEffect(() => {
             </div>
 
             {/* Content Layer */}
-            <div className='relative z-10'>
+            <div  className='relative z-10'>
                 <header className='sticky backdrop-blur-xl top-0 z-500'>
                     <Navbar/>
                 </header>
