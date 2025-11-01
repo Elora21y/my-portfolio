@@ -44,7 +44,7 @@ const Contacts = () => {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{  amount: 0.5 }}
+          viewport={{  amount: 0.4 }}
           className="flex flex-col gap-6 text-secondary-content items-center md:items-start justify-center flex-1"
         >
           {/* Title */}
@@ -97,7 +97,7 @@ const Contacts = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ amount:0.5 }}
+          viewport={{ amount:0.4 }}
           ref={formRef}
           onSubmit={handleSubmit}
           className="flex flex-col gap-5 flex-1 max-w-lg w-full bg-gray-800/30 p-6 md:p-8 rounded-2xl border border-gray-700 shadow-md shadow-violet-300"

@@ -45,13 +45,13 @@ const Banner = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-3xl  font-bold"
+            className="text-3xl  font-bold md:space-y-3"
           >
-            <span className="text-secondary text-xl sm:text-2xl md:text-3xl">Hello! Meet</span>
-            <br />
-            <span className="bg-gradient-to-r from-violet-500 via-violet-300 to-secondary bg-clip-text text-transparent sm:text-4xl md:text-5xl xl:text-6xl  my-1 md:my-2 lg:my-4 lg:ml-20 inline-block">
+            <h3 className="text-secondary text-xl sm:text-2xl md:text-3xl">Hello! Meet</h3>
+            
+            <h1 className="bg-gradient-to-r from-violet-500 via-violet-300 to-secondary bg-clip-text text-transparent sm:text-4xl md:text-5xl xl:text-6xl  my-1 md:my-2 lg:my-4 lg:ml-20 inline-block ">
               Elora Yasmin
-            </span>
+            </h1>
           </motion.h1>
 
           {/* Typewriter */}
@@ -59,7 +59,7 @@ const Banner = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-2xl sm:text-[26px] md:text-4xl font-semibold text-violet-300 h-12 lg:h-14 italic"
+            className="text-2xl sm:text-[26px] md:text-4xl font-semibold text-violet-300 h-12 lg:h-14 italic text-shadow-[8px_6px_12px_rgb(0_0_0_/_0.80)] text-shadow-primary/50"
           >
             <Typewriter
               words={[
